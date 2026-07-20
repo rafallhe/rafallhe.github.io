@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Rafallhe Almsmary — Web Developer specializing in PHP, JavaScript, MySQL, WordPress and administrative systems." />
   <meta name="theme-color" content="#07111f" />
+  <meta name="author" content="Rafallhe Almsmary" />
+  <meta property="og:title" content="Rafallhe Almsmary | Web Developer" />
+  <meta property="og:description" content="Portfolio of Rafallhe Almsmary — PHP, JavaScript, MySQL and WordPress developer." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rafallhe.github.io/" />
+  <meta property="og:image" content="https://rafallhe.github.io/assets/cover.png" />
+  <meta name="twitter:card" content="summary_large_image" />
   <title>Rafallhe Almsmary | Web Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,13 +19,15 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#mainContent">Skip to content</a>
+  <div class="scroll-progress" id="scrollProgress"></div>
   <div class="cursor-glow" id="cursorGlow"></div>
   <div class="page-noise"></div>
 
   <header class="site-header">
     <a href="#home" class="logo" aria-label="Home">RA<span>.</span></a>
 
-    <nav id="nav">
+    <nav id="nav" aria-label="Primary navigation">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
@@ -32,7 +41,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="mainContent">
     <section id="home" class="hero section">
       <div class="hero-copy reveal">
         <div class="availability"><span></span> Available for remote opportunities</div>
@@ -168,7 +177,7 @@
             <p>A distance-learning system with tutoring, course content and online exams.</p>
             <div class="tags"><span>PHP</span><span>MySQL</span><span>JavaScript</span></div>
             <div class="project-actions">
-              <a href="https://github.com/rafallhe" target="_blank" rel="noopener">GitHub ↗</a>
+              <span class="project-note">Project details available on request</span>
               <a href="#contact">Request Demo ↗</a>
             </div>
           </div>
@@ -184,7 +193,7 @@
             <p>A searchable library platform for organizing books, users and borrowing records.</p>
             <div class="tags"><span>PHP</span><span>MySQL</span><span>Bootstrap</span></div>
             <div class="project-actions">
-              <a href="https://github.com/rafallhe" target="_blank" rel="noopener">GitHub ↗</a>
+              <span class="project-note">Project details available on request</span>
               <a href="#contact">Request Demo ↗</a>
             </div>
           </div>
@@ -203,7 +212,7 @@
             <p>An internal solution for employee records and administrative workflow management.</p>
             <div class="tags"><span>PHP</span><span>MySQL</span><span>HTML/CSS</span></div>
             <div class="project-actions">
-              <a href="https://github.com/rafallhe" target="_blank" rel="noopener">GitHub ↗</a>
+              <span class="project-note">Project details available on request</span>
               <a href="#contact">Request Demo ↗</a>
             </div>
           </div>
@@ -250,7 +259,7 @@
         <p class="eyebrow">LET'S WORK TOGETHER</p>
         <h2>Have a project or remote opportunity?</h2>
         <p>
-          I am available for freelance projects, remote roles and web development opportunities.
+          I am available for freelance projects, remote roles and long-term web development opportunities.
         </p>
         <div class="contact-actions">
           <a class="btn primary magnetic" href="mailto:rafallhe.dev@gmail.com">Send Email</a>
@@ -263,6 +272,8 @@
       </div>
     </section>
   </main>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
 
   <footer>
     <p>© <span id="year"></span> Rafallhe Almsmary. Built with HTML, CSS & JavaScript.</p>

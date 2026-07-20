@@ -84,3 +84,52 @@ document.querySelectorAll('.magnetic').forEach(btn => {
   });
   btn.addEventListener('mouseleave', () => btn.style.transform = '');
 });
+
+
+// Final UX polish
+const header = document.querySelector('.site-header');
+const progress = document.getElementById('scrollProgress');
+const backToTop = document.getElementById('backToTop');
+const sections = [...document.querySelectorAll('main section[id]')];
+const navLinks = [...document.querySelectorAll('nav a[href^="#"]')];
+
+function updateScrollUI() {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  progress.style.width = `${docHeight > 0 ? (scrollTop / docHeight) * 100 : 0}%`;
+  header.classList.toggle('scrolled', scrollTop > 10);
+  backToTop.classList.toggle('show', scrollTop > 600);
+
+  let current = '';
+  sections.forEach(section => {
+    const top = section.offsetTop - 140;
+    if (scrollTop >= top) current = section.id;
+  });
+
+  navLinks.forEach(link => {
+    link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
+  });
+}
+
+window.addEventListener('scroll', updateScrollUI, { passive: true });
+updateScrollUI();
+
+backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+// Disable cursor glow on touch devices
+if (window.matchMedia('(pointer: coarse)').matches) {
+  glow.style.display = 'none';
+}
+
+// Tilt effect for project cards on precise pointers
+if (window.matchMedia('(pointer: fine)').matches) {
+  document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const r = card.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width - 0.5;
+      const y = (e.clientY - r.top) / r.height - 0.5;
+      card.style.transform = `perspective(1200px) rotateX(${y * -2.5}deg) rotateY(${x * 2.5}deg) translateY(-4px)`;
+    });
+    card.addEventListener('mouseleave', () => card.style.transform = '');
+  });
+}
