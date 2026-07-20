@@ -3,18 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio of Rafallhe Almsmary, Web Developer specializing in PHP, JavaScript, MySQL and WordPress." />
+  <meta name="description" content="Rafallhe Almsmary — Web Developer specializing in PHP, JavaScript, MySQL, WordPress and administrative systems." />
+  <meta name="theme-color" content="#07111f" />
   <title>Rafallhe Almsmary | Web Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="bg-grid"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <div class="page-noise"></div>
 
   <header class="site-header">
-    <a href="#home" class="logo">RA<span>.</span></a>
+    <a href="#home" class="logo" aria-label="Home">RA<span>.</span></a>
+
     <nav id="nav">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
@@ -22,117 +25,187 @@
       <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
     </nav>
-    <button id="menuBtn" class="menu-btn" aria-label="Open menu">☰</button>
+
+    <div class="header-actions">
+      <button id="themeBtn" class="icon-btn" aria-label="Toggle theme">◐</button>
+      <button id="menuBtn" class="icon-btn menu-btn" aria-label="Open menu">☰</button>
+    </div>
   </header>
 
   <main>
     <section id="home" class="hero section">
       <div class="hero-copy reveal">
+        <div class="availability"><span></span> Available for remote opportunities</div>
         <p class="eyebrow">HELLO, I'M</p>
-        <h1>Rafallhe<br><span>Almsmary</span></h1>
-        <h2>Web Developer & Administrative Systems Specialist</h2>
+        <h1>Rafallhe <span>Almsmary</span></h1>
+        <h2>
+          I build <span id="typingText">responsive web applications</span>
+        </h2>
         <p class="hero-text">
-          I build responsive, database-driven web applications using PHP,
-          JavaScript, MySQL and WordPress.
+          Web Developer and Administrative Systems Specialist focused on creating
+          clean, secure and user-friendly digital solutions with PHP, JavaScript,
+          MySQL and WordPress.
         </p>
+
         <div class="hero-actions">
-          <a class="btn primary" href="#projects">View My Work</a>
-          <a class="btn secondary" href="https://www.linkedin.com/in/rafallhe-almsmary-6b7423423" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn ghost" href="https://github.com/rafallhe" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn primary magnetic" href="#projects">View My Work</a>
+          <a class="btn secondary magnetic" href="https://github.com/rafallhe" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn ghost magnetic" href="https://www.linkedin.com/in/rafallhe-almsmary-6b7423423" target="_blank" rel="noopener">LinkedIn</a>
         </div>
+
         <div class="hero-stats">
-          <div><strong>5+</strong><span>Years Experience</span></div>
-          <div><strong>8+</strong><span>Core Technologies</span></div>
-          <div><strong>3</strong><span>Featured Projects</span></div>
+          <div class="stat"><strong data-count="5">0</strong><span>Years Experience</span></div>
+          <div class="stat"><strong data-count="8">0</strong><span>Core Technologies</span></div>
+          <div class="stat"><strong data-count="3">0</strong><span>Featured Projects</span></div>
         </div>
       </div>
 
       <div class="hero-visual reveal">
-        <div class="glow"></div>
-        <div class="profile-card">
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+        <div class="profile-shell">
+          <div class="profile-top">
+            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          </div>
           <img src="assets/profile.png" alt="Rafallhe Almsmary" />
-          <div class="status"><span></span> Open to Remote Work</div>
+          <div class="profile-footer">
+            <div>
+              <strong>Rafallhe Almsmary</strong>
+              <span>Web Developer</span>
+            </div>
+            <span class="online"></span>
+          </div>
         </div>
-        <div class="floating-card card-one">&lt;/&gt; Clean Code</div>
-        <div class="floating-card card-two">Responsive Design</div>
+        <div class="floating-card code-card">&lt;/&gt; Clean Code</div>
+        <div class="floating-card responsive-card">Responsive Design</div>
+        <div class="floating-card database-card">MySQL · PHP</div>
       </div>
     </section>
 
     <section id="about" class="section">
       <div class="section-heading reveal">
         <p class="eyebrow">ABOUT ME</p>
-        <h2>Building practical digital solutions</h2>
+        <h2>Building practical digital solutions that solve real problems.</h2>
       </div>
+
       <div class="about-grid">
-        <div class="about-text reveal">
+        <article class="glass-card about-text reveal">
           <p>
             I am a Web Developer with a Bachelor's degree in Information Technology
-            from the University of Benghazi and professional experience in
-            administrative systems since 2020.
+            from the University of Benghazi and professional experience in administrative
+            systems since 2020.
           </p>
           <p>
-            My work combines web development and business process improvement.
-            I enjoy creating clean, efficient and user-friendly systems that solve
-            real operational problems.
+            My work combines web development, database design and process improvement.
+            I create maintainable systems that make everyday work faster, clearer and
+            more efficient.
           </p>
-        </div>
-        <div class="info-card reveal">
+          <div class="mini-highlights">
+            <span>Problem Solving</span>
+            <span>Clean Architecture</span>
+            <span>Business Process Improvement</span>
+          </div>
+        </article>
+
+        <aside class="glass-card info-card reveal">
           <div><span>Location</span><strong>Benghazi, Libya</strong></div>
           <div><span>Degree</span><strong>B.Sc. Information Technology</strong></div>
-          <div><span>Availability</span><strong>Remote Opportunities</strong></div>
+          <div><span>Availability</span><strong>Remote / Freelance</strong></div>
           <div><span>Languages</span><strong>Arabic & English</strong></div>
-        </div>
+        </aside>
       </div>
     </section>
 
     <section id="skills" class="section">
       <div class="section-heading reveal">
         <p class="eyebrow">TECHNICAL SKILLS</p>
-        <h2>Tools I use to build</h2>
+        <h2>My development stack</h2>
       </div>
-      <div class="skills-grid">
-        <article class="skill-card reveal"><span>01</span><h3>HTML5</h3><p>Semantic, accessible page structure.</p></article>
-        <article class="skill-card reveal"><span>02</span><h3>CSS3</h3><p>Responsive layouts and modern UI.</p></article>
-        <article class="skill-card reveal"><span>03</span><h3>JavaScript</h3><p>Interactive front-end experiences.</p></article>
-        <article class="skill-card reveal"><span>04</span><h3>PHP</h3><p>Server-side applications and APIs.</p></article>
-        <article class="skill-card reveal"><span>05</span><h3>MySQL</h3><p>Relational database design and queries.</p></article>
-        <article class="skill-card reveal"><span>06</span><h3>WordPress</h3><p>Custom websites and content management.</p></article>
-        <article class="skill-card reveal"><span>07</span><h3>Bootstrap</h3><p>Fast, reliable responsive interfaces.</p></article>
-        <article class="skill-card reveal"><span>08</span><h3>Git</h3><p>Version control and collaboration.</p></article>
+
+      <div class="skills-layout">
+        <div class="skills-grid">
+          <article class="skill-card reveal"><span class="skill-icon">H5</span><h3>HTML5</h3><p>Semantic and accessible interfaces.</p></article>
+          <article class="skill-card reveal"><span class="skill-icon">C3</span><h3>CSS3</h3><p>Modern, responsive visual systems.</p></article>
+          <article class="skill-card reveal"><span class="skill-icon">JS</span><h3>JavaScript</h3><p>Interactive and dynamic experiences.</p></article>
+          <article class="skill-card reveal"><span class="skill-icon">PHP</span><h3>PHP</h3><p>Backend logic and database applications.</p></article>
+          <article class="skill-card reveal"><span class="skill-icon">SQL</span><h3>MySQL</h3><p>Relational database design and queries.</p></article>
+          <article class="skill-card reveal"><span class="skill-icon">WP</span><h3>WordPress</h3><p>Flexible content-driven websites.</p></article>
+          <article class="skill-card reveal"><span class="skill-icon">BS</span><h3>Bootstrap</h3><p>Fast responsive UI development.</p></article>
+          <article class="skill-card reveal"><span class="skill-icon">GIT</span><h3>Git</h3><p>Version control and collaboration.</p></article>
+        </div>
+
+        <div class="proficiency glass-card reveal">
+          <div class="progress-row"><div><span>HTML / CSS</span><strong>95%</strong></div><div class="bar"><i style="--level:95%"></i></div></div>
+          <div class="progress-row"><div><span>JavaScript</span><strong>85%</strong></div><div class="bar"><i style="--level:85%"></i></div></div>
+          <div class="progress-row"><div><span>PHP / MySQL</span><strong>80%</strong></div><div class="bar"><i style="--level:80%"></i></div></div>
+          <div class="progress-row"><div><span>WordPress</span><strong>70%</strong></div><div class="bar"><i style="--level:70%"></i></div></div>
+        </div>
       </div>
     </section>
 
     <section id="projects" class="section">
       <div class="section-heading reveal">
         <p class="eyebrow">FEATURED PROJECTS</p>
-        <h2>Selected work</h2>
+        <h2>Selected work and systems</h2>
       </div>
+
       <div class="projects-grid">
         <article class="project-card reveal">
-          <div class="project-number">01</div>
+          <div class="project-visual project-one">
+            <div class="project-window">
+              <div class="window-bar"><span></span><span></span><span></span></div>
+              <div class="window-content">
+                <div class="sidebar"></div>
+                <div class="content-lines">
+                  <i></i><i></i><i></i><i></i><i></i>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="project-content">
             <p class="project-type">WEB APPLICATION</p>
             <h3>E-Learning Platform</h3>
-            <p>A distance-learning platform with tutoring, course content and online exams.</p>
+            <p>A distance-learning system with tutoring, course content and online exams.</p>
             <div class="tags"><span>PHP</span><span>MySQL</span><span>JavaScript</span></div>
+            <div class="project-actions">
+              <a href="https://github.com/rafallhe" target="_blank" rel="noopener">GitHub ↗</a>
+              <a href="#contact">Request Demo ↗</a>
+            </div>
           </div>
         </article>
+
         <article class="project-card reveal">
-          <div class="project-number">02</div>
+          <div class="project-visual project-two">
+            <div class="book-grid"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          </div>
           <div class="project-content">
             <p class="project-type">DATABASE SYSTEM</p>
             <h3>Digital Library</h3>
-            <p>A searchable digital library for organizing books, users and borrowing records.</p>
+            <p>A searchable library platform for organizing books, users and borrowing records.</p>
             <div class="tags"><span>PHP</span><span>MySQL</span><span>Bootstrap</span></div>
+            <div class="project-actions">
+              <a href="https://github.com/rafallhe" target="_blank" rel="noopener">GitHub ↗</a>
+              <a href="#contact">Request Demo ↗</a>
+            </div>
           </div>
         </article>
+
         <article class="project-card reveal">
-          <div class="project-number">03</div>
+          <div class="project-visual project-three">
+            <div class="dashboard-ui">
+              <span class="metric"></span><span class="metric"></span><span class="metric"></span>
+              <div class="chart"></div>
+            </div>
+          </div>
           <div class="project-content">
             <p class="project-type">INTERNAL SYSTEM</p>
             <h3>Employee Management System</h3>
-            <p>An internal solution designed to improve employee records and administrative workflows.</p>
+            <p>An internal solution for employee records and administrative workflow management.</p>
             <div class="tags"><span>PHP</span><span>MySQL</span><span>HTML/CSS</span></div>
+            <div class="project-actions">
+              <a href="https://github.com/rafallhe" target="_blank" rel="noopener">GitHub ↗</a>
+              <a href="#contact">Request Demo ↗</a>
+            </div>
           </div>
         </article>
       </div>
@@ -143,41 +216,49 @@
         <p class="eyebrow">EXPERIENCE</p>
         <h2>Professional background</h2>
       </div>
-      <div class="timeline reveal">
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
+
+      <div class="timeline">
+        <article class="timeline-item reveal">
+          <div class="timeline-marker"></div>
           <div class="timeline-date">2020 — Present</div>
-          <div class="timeline-content">
+          <div class="timeline-content glass-card">
             <h3>Administrative Systems Specialist</h3>
             <p class="company">Civil Status Authority — Libya</p>
             <ul>
-              <li>Organized correspondence between branches.</li>
-              <li>Prepared administrative decisions and official reports.</li>
-              <li>Created internal systems for employee and workflow management.</li>
+              <li>Organized official correspondence between branches.</li>
+              <li>Prepared administrative decisions and formal reports.</li>
+              <li>Built internal tools for employee and workflow management.</li>
               <li>Supported digital transformation of administrative processes.</li>
             </ul>
           </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-marker"></div>
           <div class="timeline-date">2020</div>
-          <div class="timeline-content">
+          <div class="timeline-content glass-card">
             <h3>Bachelor's Degree in Information Technology</h3>
             <p class="company">University of Benghazi</p>
-            <p>Focused on web design, development and database-driven applications.</p>
+            <p>Focused on web design, software development and database-driven applications.</p>
           </div>
-        </div>
+        </article>
       </div>
     </section>
 
     <section id="contact" class="section contact-section">
       <div class="contact-card reveal">
         <p class="eyebrow">LET'S WORK TOGETHER</p>
-        <h2>Need a web developer for your next project?</h2>
-        <p>I am available for remote opportunities, freelance projects and web development roles.</p>
+        <h2>Have a project or remote opportunity?</h2>
+        <p>
+          I am available for freelance projects, remote roles and web development opportunities.
+        </p>
         <div class="contact-actions">
-          <a class="btn primary" href="mailto:rafallhe.dev@gmail.com">Send Email</a>
-          <a class="btn secondary" href="https://www.linkedin.com/in/rafallhe-almsmary-6b7423423" target="_blank" rel="noopener">Message on LinkedIn</a>
+          <a class="btn primary magnetic" href="mailto:rafallhe.dev@gmail.com">Send Email</a>
+          <a class="btn secondary magnetic" href="https://www.linkedin.com/in/rafallhe-almsmary-6b7423423" target="_blank" rel="noopener">Message on LinkedIn</a>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:rafallhe.dev@gmail.com">rafallhe.dev@gmail.com</a>
+          <a href="https://github.com/rafallhe" target="_blank" rel="noopener">github.com/rafallhe</a>
         </div>
       </div>
     </section>
